@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar">
+        <ul class="links">
+            <li class="link active"><a href="#">HOME</a></a></li>
+            <li class="link"><a href="#">PROJECTS</a></a></li>
+            <li class="link"><a href="#">ABOUT</a></a></li>
+        </ul>
+    </nav>
+
+    <!-- home section-->
+    <section class="home-section active">
+        <div class="footer">
+        </div> 
+        <div id="particles-js">
+            <canvas class="particles-js-canvas-el"></canvas>
+        </div>
+        
+        <h1 class="hero-heading">
+            <div class="container">
+                <pre><code><span class="prompt" id="welcome-text"></span></code></pre>
+            </div>
+        </h1>
+
+
+        <div class="social-links">
+            <a href="https://github.com/alshahriar203" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/mahir.shahriar.77/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/mahir-a-159a14156/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+   
+    <!-- project section -->
+    <section class="project-section">
+        <div class="project-container">
+            <div class="project-card">
+                <img src="images/connect4.png" class="project-img" alt="">
+                <div class="project-content">
+                    <h1 class="project-title">Connect4</h1>
+                    <p class="project-info">
+                        This was my University 1st Year Project: Connect 4 in C. This game uses a Command Line Interface to play the game. 
+                        It also features an AI adversary which is implemented in a IDS Minimax Algorithm. The entire game was written in C 
+                        with no external Libraries used. 
+                    </p>
+                    <div class="project-btn-grp">
+                        <a href="https://github.com/alshahriar203/Connect4" class="project-btn github">github repo</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="project-card">
+                <img src="images/mahirchess.png" class="project-img" alt="">
+                <div class="project-content">
+                    <h1 class="project-title">Mahir Chess</h1>
+                    <p class="project-info">
+                        This was my University 2nd Year Project: Mahir Chess in Java. This features a 2 player Chess Game, written completely
+                        in Java, and AWT framework as the minimalist GUI. This show case various design patterns, and OOP principles and designs 
+                        used in games.
+                    </p>
+                    <div class="project-btn-grp">
+                        <a href="https://github.com/alshahriar203/Mahir-Chess" class="project-btn github">github repo</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="project-card">
+                <img src="images/psd.png" class="project-img" alt="">
+                <div class="project-content">
+                    <h1 class="project-title">PSD Graphics/Text Remover</h1>
+                    <p class="project-info">
+                        This is a Command Line Utility that does Batch processing on PSD files, and converts them to png files with
+                        1. Text Elements Removed, 2. Graphics Elements Removed. This is a handy python utility created mainly for the usage of Graphics
+                        Designers. The psd-tools library is used. 
+                    </p>
+                    <div class="project-btn-grp">
+                        <a href="https://github.com/alshahriar203/PSDEDIT" class="project-btn github">github repo</a>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="about-section">
+        <div class="about">
+            <div class="about-img-container">
+                <img src="images/profilePic.jpg" class="about-img" alt="">
+                <a href="https://alshahriar203.github.io/CV/" class="cv-btn" download>Check out My CV</a>
+            </div>
+            <p class="about-info">I am Mahir Al Shahriar, an enthusiast in Theoretical Computer Science, Mathematics, and Martial Arts.
+                <br/>
+                I am currently doing Bsc. Engg in Software Engineering at SUST. My passion in Mathematical Thinking always leads me to
+                <br/> 
+                extract the Mathematical Abstractions in the real world phenomenon. The search of pattern is endless, so is the search for knowledge and excellence.
+                <br/>
+                The mind alone can’t achieve without the synergy of the body, hence fitness and workout is a crucial part of my life.
+                <br/>
+                I am an ardent practitioner of Martial arts: Karate, Taekwondo, and Wingchun. 
+        </div>
+
+
+        <!-- skill-->
+        <div class="skill-section">
+            <h1 class="heading">skills</h1>
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-bar">
+                        <div class="skill-percentage" per="70%" style="max-width:70%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-percentage" per="50%" style="max-width:50%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Javascript</div>
+                    <div class="skill-bar">
+                        <div class="skill-percentage" per="60%" style="max-width:60%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">C/C++</div>
+                    <div class="skill-bar">
+                        <div class="skill-percentage" per="90%" style="max-width:90%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Java</div>
+                    <div class="skill-bar">
+                        <div class="skill-percentage" per="80%" style="max-width:80%"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-bar">
+                        <div class="skill-percentage" per="60%" style="max-width:60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- skills -->
+
+
+
+        <!--experience-->
+
+        <div class="timeline">
+            <h1 class="heading">Educational Background</h1>
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">2019-Present</h1>
+                    <p class="card-details">Shahjalal University Of Science and Technology (SUST), Bsc. Engg Software Engineering</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">2017-2019</h1>
+                    <p class="card-details">British Council, AS and A2</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">2003-2017</h1>
+                    <p class="card-details">Scholastica, from Playgroup to O' level</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+  
+   
+
+    <script src="app.js"></script>
+</body>
+</html>
