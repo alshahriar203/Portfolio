@@ -1,7 +1,10 @@
+//Navigation Logic
+
 const links =document.querySelectorAll('.link');
 const section = document.querySelectorAll('section');
 
 let activeLink = 0;
+
 links.forEach((link,i)=>{
     link.addEventListener('click',()=>{
         if(activeLink!=i){
@@ -17,66 +20,51 @@ links.forEach((link,i)=>{
     })
 })
 
-window.addEventListener('scroll', function() {
-    var projectHeading = document.querySelector('.project-heading');
-    var scrollPosition = window.scrollY;
 
-    if (scrollPosition > 100) {
-        projectHeading.classList.add('hide');
-    } else {
-        projectHeading.classList.remove('hide');
+
+//Type writing animation
+var text = document.getElementById('welcome-text');
+var container = document.querySelector('.container');
+var message = "Hey,\nI am Mahir, Welcome to my space.\nLet's explore my journey through\nmy accomplishments, projects and more.";
+var index = 0;
+        
+function typeText() {
+    if (index < message.length) {
+        text.textContent += message.charAt(index);
+        index++;
+
+        if (container.scrollWidth > container.offsetWidth) {
+            text.innerHTML += "<br>";
+        }
+            
+        setTimeout(typeText, 100);   
     }
-});
+    else{
+        setTimeout(deleteText, 1500);
+    }
+}
 
+function deleteText() {
+    if (index >= 0) {
+        text.textContent = message.substr(0, index);
+        index--;
+        setTimeout(deleteText, 50);
+    } else {
+        setTimeout(typeText, 1000); 
+    }
+}
 
-
-        // JavaScript code to animate the welcome message
-        var welcomeText = document.getElementById('welcome-text');
-        var container = document.querySelector('.container');
-        var message = "Hey,\nI am Mahir, Welcome to my space.\nLet's explore my journey through\nmy accomplishments, projects and more.";
-        var index = 0;
-        
-        function typeWelcomeText() {
-            if (index < message.length) {
-                welcomeText.textContent += message.charAt(index);
-                index++;
-
-                // Check if the container width exceeds the maximum width
-                if (container.scrollWidth > container.offsetWidth) {
-                    // Start a new line
-                    welcomeText.innerHTML += "<br>";
-                }
-                
-                setTimeout(typeWelcomeText, 100);
-
-               
-            }
-            else{
-                setTimeout(deleteWelcomeText, 1500);
-            }
-        }
-
-        function deleteWelcomeText() {
-            if (index >= 0) {
-                welcomeText.textContent = message.substr(0, index);
-                index--;
-                setTimeout(deleteWelcomeText, 50);
-            } else {
-                setTimeout(typeWelcomeText, 1000); // Wait for 1 second before typing the text again
-            }
-        }
-        
-        typeWelcomeText();
+typeText();        
 
 
 
 
-    //PARTICLE CODE //
 
+
+//Configuring particles animation
 
 particlesJS("particles-js", {
     particles: {
-        // Particle configuration options...
         number: {
             value: 100,
             density: {
@@ -102,6 +90,7 @@ particlesJS("particles-js", {
                 height: 100
             }
         },
+
         opacity: {
             value: .5,
             random: !1,
@@ -112,6 +101,7 @@ particlesJS("particles-js", {
                 sync: !1
             }
         },
+
         size: {
             value: 3,
             random: !0,
@@ -122,6 +112,7 @@ particlesJS("particles-js", {
                 sync: !1
             }
         },
+
         line_linked: {
             enable: !0,
             distance: 150,
@@ -129,6 +120,7 @@ particlesJS("particles-js", {
             opacity: .4,
             width: 1
         },
+
         move: {
             enable: !0,
             speed: 6,
@@ -145,7 +137,6 @@ particlesJS("particles-js", {
         }
     },
     interactivity: {
-        // Interactivity configuration options...
         detect_on: "canvas",
         events: {
             onhover: {
@@ -184,5 +175,6 @@ particlesJS("particles-js", {
             }
         }
     },
+    
     retina_detect: true
 });
