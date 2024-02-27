@@ -112,7 +112,6 @@ body{
     font-family: cursive;
     font-size: x-large;
     letter-spacing: 1px;
-    animation: typing 2s steps(20), blink-caret 0.5s step-end infinite;
     margin: 0;
     pointer-events: none; /* Make the text unclickable */
     user-select: none; /* Make the text unselectable */
@@ -123,24 +122,7 @@ body{
     user-drag: none; /* Make the text undraggable */
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
 
-@keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #00FF00;
-    }
-}
 
 .social-links {
     position: absolute;
@@ -159,6 +141,7 @@ body{
 .social-links a:hover {
     color: #fff;
 }
+
 /*project-section*/
  
 .project-section{
@@ -171,23 +154,7 @@ body{
     opacity: 0;
 }
 
-.project-heading{
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    font-size: 100px;
-    background: #252525;
-    text-transform: capitalize;
-    text-align: center;
-    color: #1a1a1a;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-stroke: 8px transparent;
-    
-}
-.project-heading.hide {
-    opacity: 0;
-    visibility: hidden;
-}
+
 .project-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -453,7 +420,6 @@ body{
 
 }
 .skills {
-
     width: 100%;
     max-width:600px;
     padding: 0 20px;
@@ -478,7 +444,7 @@ body{
     background: #FF96AD;
     border-radiud: 3px;
     position: relative;
-    animation: fillBars 2.5s 1;
+    animation: fillBars 3s infinite;
   }
   
   .skill-percentage::before{
